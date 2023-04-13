@@ -20,7 +20,7 @@ const Signup = () => {
     setLoading(true);
     const requestData = { fullName: fullName, email, password };
     axios
-      .post(`https://instabackend-production.up.railway.app/signup`, requestData)
+      .post(`http://localhost:5000/signup`, requestData)
       .then((result) => {
         if (result.status === 201) {
           setLoading(false);
